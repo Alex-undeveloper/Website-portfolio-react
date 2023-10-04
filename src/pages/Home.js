@@ -1,11 +1,16 @@
 import Header from "../components/header/Header";
-
+import {Box, Button} from "@mui/material";
 function Home () {
     return (
         <>
             <Header />
             <main className="section">
                 <div className="container">
+
+                {/* <Button variant="contained" sx={{
+                    color: 'red',
+                    fontSize: {lg: '32px', md: '16px'}
+                }}>Default</Button> */}
 
                         <ul className="content-list">
                             <li className="content-list__item">

@@ -4,14 +4,14 @@ import "./style.css"
 
 import BtnDarkMode from "../btnDarkMode/BtnDarkMode";
 
-
+import { links } from "../../helpers/linkList";
 
 
 function Navbar () {
 
 
-    const activeLink = 'nav_list__link nav_list__link--active';
-    const normalLink = "nav_list__link";
+    const activeLink = 'nav-list__link nav-list__link--active';
+    const normalLink = "nav-list__link";
 
     return (
         <nav className="nav">
@@ -24,7 +24,9 @@ function Navbar () {
 
                     <BtnDarkMode />
 
-                    <ul className="nav-list">
+                    
+
+                    {/* <ul className="nav-list">
                         <li className="nav-list__item">
                             <NavLink to="/" className={({isActive}) => isActive ? activeLink : normalLink}>
                                 Главная
@@ -43,7 +45,31 @@ function Navbar () {
                             </NavLink>
                         </li>
 
+                    </ul> */}
+
+                    {/* <ul className="links">
+                        {links.map((links) => {
+                            return (
+                                // <links title={links.title} />
+                                <a>{links.title}</a>
+                            )
+                        })}
+                    </ul> */}
+
+                    <ul className="links">
+                        {links.map((links) => {
+                            return (
+                            <NavLink to = {links.scr} className={({isActive}) => isActive ? activeLink : normalLink}>
+                                {links.title}
+                            </NavLink>
+                            )
+                        })}
                     </ul>
+
+
+
+                {/* {console.log(links)} */}
+
                 </div>
             </div>
         </nav>

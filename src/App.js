@@ -1,5 +1,10 @@
 import "./styles/main.css";
 
+import * as React from 'react';
+import Stack from '@mui/material/Stack'; 
+
+import {Box, Button} from "@mui/material";
+
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/Home";
@@ -11,7 +16,7 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App"> 
         <Router>
           <Navbar />
 
