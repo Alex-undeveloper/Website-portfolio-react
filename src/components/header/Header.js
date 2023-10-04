@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import Button from '@material-ui/core/Button';
-import {Box, Button} from "@mui/material";
+import {Box, Button, Typography} from "@mui/material";
 
 
 
@@ -24,18 +24,32 @@ function Header () {
             textAlign: 'center',
             marginTop: '70px'
         }}>
-            {/* <header className="header"> */}
-                <div className="header__wrapper">
-                    <h1 className="header__title">
+                <Box sx = {{
+                    padding: '0 15px',
+                    maxWidth: '660px'
+                }}>
+                    {/* <h1 className="header__title">
                         <strong>Привет, я <em>Алексей</em></strong><br />
                         я фронтэнд недоразроботчик
-                    </h1>
-                    <div className="header__text">
+                    </h1> */}
+                    <Typography variant="h1" sx = {{
+                        marginBottom: '20px',
+                        fontSize: '40px',
+                        fontWeight: '700',
+                        lineHeight: '1.4'
+                        }}>
+                            <strong>Привет, я Алексей</strong><br />
+                            я фронтэнд недоразроботчик
+                    </Typography>       
+                    <Box sx = {{
+                        marginBottom: '40px',
+                        fontSize: '18px',
+                        lineHeight: '1.333'
+                    }}>
                         <p>но с большим желанием развиваться.</p>
-                    </div>
+                    </Box>
                     <a href="#!" className="btn">Моё резюме</a>
-                </div>
-            {/* </header> */}
+                </Box>
         </Box>
     )
 }
